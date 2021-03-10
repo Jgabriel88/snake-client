@@ -11,8 +11,23 @@ const connect = function () {
     console.log("Connection established!");
     conn.write('Name: Gabriel');
 
+
   });
+
+  conn.on('data', (dataFromServer) => {
+    console.log(dataFromServer)
+  })
+
+  // conn.on('connect', () => {
+  //   setInterval(() => {
+  //     conn.write('Move: up')
+  //   }, 50)
+  // });
+
+
   return conn;
+
 }
+
 
 module.exports = {connect}
