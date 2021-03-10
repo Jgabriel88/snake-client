@@ -1,5 +1,3 @@
-const {connect} = require("./client");
-
 let connection;
 
 const handleUserInput = (inputFromKey) => {
@@ -17,6 +15,9 @@ const handleUserInput = (inputFromKey) => {
   }
   if (inputFromKey === 'd') {
     connection.write('Move: right')
+  }
+  if (inputFromKey === 'm') {
+    connection.write('Say: LHL')
   }
 }
 
